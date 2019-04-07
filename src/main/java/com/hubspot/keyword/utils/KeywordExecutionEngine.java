@@ -30,9 +30,7 @@ public class KeywordExecutionEngine {
 	public final String DATA_SHEET_PATH = "C:\\Users\\masingh\\Documents\\HubSpot_KeywordDrivenFramework\\HubSpot_TestData.xlsx";
 
 	public void startExecution(String sheetName) {
-		String locatorName = null;
-		String locatorValue = null;
-
+		
 		FileInputStream fis = null;
 
 		try {
@@ -52,13 +50,10 @@ public class KeywordExecutionEngine {
 		for (int i = 0; i < sheet.getLastRowNum(); i++) {
 			try {
 
-				String locatorColValue = sheet.getRow(i + 1).getCell(k + 1).toString().trim(); // id=username
-				if (!locatorColValue.equalsIgnoreCase("NA")) {
-					locatorName = locatorColValue.split("=")[0].trim(); // id
-					locatorValue = locatorColValue.split("=")[1].trim(); // username
-				}
-				String action = sheet.getRow(i + 1).getCell(k + 2).toString().trim();
-				String value = sheet.getRow(i + 1).getCell(k + 3).toString().trim();
+				String locatorType = sheet.getRow(i + 1).getCell(k + 1).toString().trim();
+				String locatorValue = sheet.getRow(i + 1).getCell(k + 2).toString().trim();
+				String action = sheet.getRow(i + 1).getCell(k + 3).toString().trim();
+				String value = sheet.getRow(i + 1).getCell(k + 4).toString().trim();
 
 				switch (action) {
 				case "open browser":
@@ -87,7 +82,7 @@ public class KeywordExecutionEngine {
 					break;
 				}
 
-				switch (locatorName) {
+				switch (locatorType) {
 				case "id":
 					element = driver.findElement(By.id(locatorValue));
 					if (action.equalsIgnoreCase("sendkeys")) {
@@ -96,13 +91,13 @@ public class KeywordExecutionEngine {
 					} else if (action.equalsIgnoreCase("click")) {
 						element.click();
 					}
-					locatorName = null;
+					locatorType = null;
 					break;
 
 				case "linkText":
 					element = driver.findElement(By.linkText(locatorValue));
 					element.click();
-					locatorName = null;
+					locatorType = null;
 					break;
 
 				default:
