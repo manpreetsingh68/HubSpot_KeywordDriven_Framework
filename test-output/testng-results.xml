@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18889" started-at="2019-04-07T13:52:24Z" finished-at="2019-04-07T13:52:43Z">
+  <suite name="Default suite" duration-ms="31066" started-at="2019-04-07T19:53:39Z" finished-at="2019-04-07T19:54:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18889" started-at="2019-04-07T13:52:24Z" finished-at="2019-04-07T13:52:43Z">
+    <test name="Default test" duration-ms="31066" started-at="2019-04-07T19:53:39Z" finished-at="2019-04-07T19:54:10Z">
       <class name="com.hubspot.keyword.testcases.LoginTest">
-        <test-method status="PASS" signature="loginTest()[pri:1, instance:com.hubspot.keyword.testcases.LoginTest@29ee9faa]" name="loginTest" duration-ms="8096" started-at="2019-04-07T13:52:24Z" finished-at="2019-04-07T13:52:32Z">
+        <test-method status="PASS" signature="loginTest()[pri:1, instance:com.hubspot.keyword.testcases.LoginTest@29ee9faa]" name="loginTest" duration-ms="10646" started-at="2019-04-07T19:53:39Z" finished-at="2019-04-07T19:53:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="SignUpLinkTest()[pri:2, instance:com.hubspot.keyword.testcases.LoginTest@29ee9faa]" name="SignUpLinkTest" duration-ms="10755" started-at="2019-04-07T13:52:32Z" finished-at="2019-04-07T13:52:43Z">
+        <test-method status="PASS" signature="SignUpLinkTest()[pri:2, instance:com.hubspot.keyword.testcases.LoginTest@29ee9faa]" name="SignUpLinkTest" duration-ms="20386" started-at="2019-04-07T19:53:49Z" finished-at="2019-04-07T19:54:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignUpLinkTest -->

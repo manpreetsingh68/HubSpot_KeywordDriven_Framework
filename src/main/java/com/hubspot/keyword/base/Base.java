@@ -22,12 +22,15 @@ public class Base {
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("--headless");
 				driver = new ChromeDriver();
+				driver.manage().window().maximize();
 			} else {
 				driver = new ChromeDriver();
+				driver.manage().window().maximize();
 			}
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", prop.getProperty("FIREFOX_DRIVER_PATH"));
 			driver = new FirefoxDriver();
+			driver.manage().window().maximize();
 		}
 		return driver;
 	}
